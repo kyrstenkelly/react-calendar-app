@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  display: flex; }
+
+section {
+  display: flex;
+  align-items: flex-start; }
+
+#root {
+  width: 100%; }
+
+.menu {
+  margin: 25px;
+  width: 200px; }
+
+.calendar {
+  margin: 15px 25px 25px;
+  width: 70%;
+  flex-grow: 1; }
+  .calendar .title-bar {
+    text-align: center;
+    line-height: 50px; }
+    .calendar .title-bar .title {
+      display: inline;
+      font-size: 28px; }
+    .calendar .title-bar .add-event {
+      float: right; }
+  .calendar .rows {
+    border: 1px gray solid;
+    border-radius: 3px; }
+    .calendar .rows .row {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      border-bottom: 1px gray solid; }
+      .calendar .rows .row:last-of-type {
+        border: none; }
+      .calendar .rows .row .day {
+        flex: 1;
+        width: 0;
+        height: 100px;
+        padding: 5px 7px;
+        font-size: 12px;
+        border-left: 1px gray solid; }
+        .calendar .rows .row .day:first-of-type {
+          border: none; }
+        .calendar .rows .row .day.selected {
+          background: #eff5ff; }
+      .calendar .rows .row .event {
+        font-size: 14px; }
+  .calendar .modal {
+    padding: 5px 20px 20px; }
